@@ -18,6 +18,7 @@ function replaceFirstName(){
     let el= $(`#userFirstName`);
     el.empty();
     let inp= $(`#FirstName`).val();
+    $(`#FirstName`).val(``);
     el.append(inp);
 }//end replaceFirstName
 
@@ -25,6 +26,7 @@ function replaceLastName(){
     let el2= $(`#userLastName`);
     el2.empty();
     let inp= $(`#LastName`).val();
+    $(`#LastName`).val(``);
     el2.append(inp);
 } //end replaceLastName
 
@@ -32,6 +34,7 @@ function replaceID(){
     let el3= $(`#userID`);
     el3.empty();
     let inp= $(`#IDnumber`).val();
+    $(`#IDnumber`).val(``);
     el3.append(inp);
 } //end replaceID
 
@@ -39,6 +42,7 @@ function replaceTitle(){
     let el4= $(`#userTitle`);
     el4.empty();
     let inp= $(`#jobTitle`).val();
+    $(`#jobTitle`).val(``);
     el4.append(inp);
 }//end replaceTitle
 
@@ -46,6 +50,7 @@ function replaceSalary(){
     let el5= $(`#userSalary`);
     el5.empty();
     let inp= $(`#salary`).val();
+    $(`#salary`).val(``);
     el5.append(inp);
 }// end replaceSalary
 
