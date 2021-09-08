@@ -1,58 +1,34 @@
 $(document).ready(onReady);
 
 function onReady(){
-  $(`#SubmitEmployeeInfo`).on('click', replaceFirstName);
-  $(`#SubmitEmployeeInfo`).on(`click`, replaceLastName);
-  $(`#SubmitEmployeeInfo`).on(`click`, replaceID);
-  $(`#SubmitEmployeeInfo`).on(`click`, replaceTitle);
-  $(`#SubmitEmployeeInfo`).on(`click`, replaceSalary);
-}//end onReady
 
-    // let fName = $(`#userFirstName`);
-    // let lName = $(`#userLastName`);
-    // let IDnumber = $(`#IDnumber`);
-    // let jobTitle = $(`#jobTitle`);
-    // let annualSalary= $(`#salary`);
+$(`#SubmitEmployeeInfo`).on(`click`, addEmployee);
 
-function replaceFirstName(){
-    let el= $(`#userFirstName`);
-    el.empty();
-    let inp= $(`#FirstName`).val();
-    $(`#FirstName`).val(``);
-    el.append(inp);
-}//end replaceFirstName
+};//end onReady
 
-function replaceLastName(){
-    let el2= $(`#userLastName`);
-    el2.empty();
-    let inp= $(`#LastName`).val();
-    $(`#LastName`).val(``);
-    el2.append(inp);
-} //end replaceLastName
 
-function replaceID(){
-    let el3= $(`#userID`);
-    el3.empty();
-    let inp= $(`#IDnumber`).val();
-    $(`#IDnumber`).val(``);
-    el3.append(inp);
-} //end replaceID
 
-function replaceTitle(){
-    let el4= $(`#userTitle`);
-    el4.empty();
-    let inp= $(`#jobTitle`).val();
-    $(`#jobTitle`).val(``);
-    el4.append(inp);
-}//end replaceTitle
+function addEmployee(){
+    let newEmployee = {
+        fName: $(`#FirstName`).val(), //value equals user input
+        lName: $(`#LastName`).val(),
+        id: $(`#IDnumber`).val(),
+        jobTitle: $(`#jobTitle`).val(),
+        salary: $(`#salary`).val(),  //value equals user input
+        };//end object
 
-function replaceSalary(){
-    let el5= $(`#userSalary`);
-    el5.empty();
-    let inp= $(`#salary`).val();
-    $(`#salary`).val(``);
-    el5.append(inp);
-}// end replaceSalary
+        //add new rows to the table with the the user input added
+    $(`#tableRow`).append(`<tr><td>`+newEmployee.fName+`</td>`+ 
+                            `<td>`+newEmployee.lName+`</td>`+ 
+                            `<td>`+newEmployee.id+`</td>`+ 
+                            `<td>`+newEmployee.jobTitle+`</td>`+ 
+                            `<td id="salary">`+newEmployee.salary+`</td></tr>`)
+
+    $(`#FirstName`).val(``); $(`#LastName`).val(``); $(`#IDnumber`).val(``); $(`#jobTitle`).val(``); $(`#salary`).val(``);
+
+};
+
+
 
 // The application should have an input form - capture this click event.... 
 //  collects _employee first name, 
@@ -60,9 +36,6 @@ function replaceSalary(){
 //  ID number, 
 //  job title, 
 //  annual salary
-// create an object? employee name, traits are the other items?
-
-
 
 // A 'Submit' button should collect the form information, 
 //append information to the DOM and clear the input fields. 
