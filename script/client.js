@@ -47,7 +47,7 @@ function addSalary(){
     }
 
     $(`#calculation`).empty().val(``); //emptys previous salary number 
-    $(`#calculation`).append(`Salary =`+ total); //appends with new  number
+    $(`#calculation`).append(`Total Monthly Salary =`+ total); //appends with new  number
 
     console.log(`total`, total);
 
@@ -55,8 +55,6 @@ function addSalary(){
     if (total >= 20000){ 
     $(`#calculation`).toggleClass( `red` )};
 }; //end addSalary
-
-
 
 
 // Create a delete button that removes an employee from the DOM. For Base mode, it does **not** need to remove that Employee's salary from the reported total.
