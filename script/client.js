@@ -23,7 +23,7 @@ function addEmployee(){
                             `<td>`+newEmployee.id+`</td>`+ 
                             `<td>`+newEmployee.jobTitle+`</td>`+ 
                             `<td id="salary">`+newEmployee.salary+`</td>`+
-                            `<td id="delete">` + `<button class="deleteEmployeeInfo">Delete</button></td></tr>`)
+                            `<td id="delete">` + `<button class="deleteEmployeeInfo">Delete</button></td></tr>`);
                         
 
     $(`#FirstName`).val(``); $(`#LastName`).val(``); $(`#IDnumber`).val(``); $(`#jobTitle`).val(``); $(`#salary`).val(``); //emptys the entry field

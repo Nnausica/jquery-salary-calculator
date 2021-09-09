@@ -27,6 +27,9 @@ table, th, td {
 #salary { width: 100px}
 #delete {width: 100px}
 
+#blankRow {height: 25px; 
+outline: black solid 1px !important;}
+
 .red{ background-color: red;}
 
 #calculation {text-align: right; padding-top: 5px;

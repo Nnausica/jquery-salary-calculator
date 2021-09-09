@@ -8,7 +8,7 @@
     <script src="vendor/jquery-3.6.0.min.js"></script>
     <script src="script/client.js"></script>
     <link rel="stylesheet" href="style/style.css">
-
+    <style> tr:nth-child(odd){background-color: #F5F5F5;}</style>
 </head>
 
 <header><p id="header"> Salary Calculator </p></header>
@@ -26,6 +26,7 @@
 
     <p id="employees">Employees</p>
 
+    <div>
     <table id="table">
         <tr class="tableRow">
           <th id="first">First</th>
@@ -35,7 +36,8 @@
           <th id="salary">Annual Salary</th>
           <th id="delete"></th>
         </tr>
-      </table>
+        <tfoot id="blankRow"></tfoot>
+    </div>
     
     <p id="calculation"> Total Monthly Salary=0</p>
 </body>
