@@ -8,28 +8,34 @@
     <script src="vendor/jquery-3.6.0.min.js"></script>
     <script src="script/client.js"></script>
     <link rel="stylesheet" href="style/style.css">
+
 </head>
-    <p> Salary Calculator </p>
+
+<header><p id="header"> Salary Calculator </p></header>
+
+<p> Add Employee </p>
+
 <body>
     <input type="text" placeholder="First Name" id="FirstName">
     <input type="text" placeholder="Last Name" id="LastName">
     <input type="text" placeholder="ID Number" id="IDnumber">
     <input type="text" placeholder="Job Title" id="jobTitle">
-    <input type="number" placeholder="Annual Salary" id="salary">
+    <input type="text" placeholder="Annual Salary" id="salary">
     <button id="SubmitEmployeeInfo"> Submit </button>
 
-    <p>Employees</p>
+    <p id="employees">Employees</p>
 
     <table id="tableRow">
         <tr>
-          <th>First</th>
-          <th>Last</th>
-          <th>ID</th>
-          <th>title</th>
-          <th id="salaryRow">salary</th>
-          <th> </th>
+          <th id=>First</th>
+          <th id=>Last</th>
+          <th id=>ID</th>
+          <th id=>title</th>
+          <th id="salary">salary</th>
+          <th id="delete"></th>
         </tr>
       </table>
     
+    <p id="calculation"> Salary = 0</p>
 </body>
 </html>

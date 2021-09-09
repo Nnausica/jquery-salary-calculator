@@ -1,12 +1,13 @@
 $(document).ready(onReady);
 
 function onReady(){
-
 $(`#SubmitEmployeeInfo`).on(`click`, addEmployee);
+$(`#deleteEmployeeInfo`).on(`click`, deleteEmployee);
+$(`#SubmitEmployeeInfo`).on(`click`, addSalary);
 
 };//end onReady
 
-
+let employees=[];
 
 function addEmployee(){
     let newEmployee = {
@@ -22,23 +23,38 @@ function addEmployee(){
                             `<td>`+newEmployee.lName+`</td>`+ 
                             `<td>`+newEmployee.id+`</td>`+ 
                             `<td>`+newEmployee.jobTitle+`</td>`+ 
-                            `<td id="salary">`+newEmployee.salary+`</td></tr>`)
+                            `<td id="salary">`+newEmployee.salary+`</td>`+
+                            `<td id="delete">` + `<button id="deleteEmployeeInfo">Delete</button></td></tr>`)
+                        
 
-    $(`#FirstName`).val(``); $(`#LastName`).val(``); $(`#IDnumber`).val(``); $(`#jobTitle`).val(``); $(`#salary`).val(``);
+    $(`#FirstName`).val(``); $(`#LastName`).val(``); $(`#IDnumber`).val(``); $(`#jobTitle`).val(``); $(`#salary`).val(``); //emptys the entry field
 
+    employees.push(newEmployee); // adds newly entered employee to the array
 };
 
+function deleteEmployee(){
+    //on delete button click
+    $(this).parent().remove()
+    // remove the whole row of the table. 
+    //link to other button?
+}
+// $('#exsistingbuttonclick').on('click', "deleteEmployeeInfo", deleteEmployee) THIS NEEDS TO GO SOMEWHERE?
+
+function addSalary(){
+    let total=0
+    for (i=0; i<employees.length; i++){
+        total += employees[i].salary
+    };
+    console.log(`total salary?`, total);
+}; //end addSalary
+
+    // need to emtpy out content in #calculation
+    // then append with new sum on submit button click
+
+    // $(`calculation`).empty(); //this isnt working either
+    // $(`#calculation`).append(`Salaries =`+ sum)
 
 
-// The application should have an input form - capture this click event.... 
-//  collects _employee first name, 
-//  last name, 
-//  ID number, 
-//  job title, 
-//  annual salary
-
-// A 'Submit' button should collect the form information, 
-//append information to the DOM and clear the input fields. 
 
 //store the information to calculate monthly costs, 
 
