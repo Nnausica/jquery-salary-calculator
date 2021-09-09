@@ -10,4 +10,11 @@ body{font-family: Arial, Helvetica, sans-serif;}
 
 #employees {text-align: left;}
 
+table, th, td {
+        border-top: black solid 1px;
+        border-bottom: black solid 1px;
+        border-left: black solid 1px;
+        border-right: black solid 1px;
+    border-collapse: collapse;}
+
 .red{ background-color: red;}
