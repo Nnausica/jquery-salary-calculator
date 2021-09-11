@@ -53,7 +53,7 @@ function addSalary(){
 
     //If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost.
     if (total >= 20000){ 
-    $(`#calculation`).toggleClass( `red` )};
+    $(`#calculation`).css( `background-color`, `red`)};
 }; //end addSalary
 
 
